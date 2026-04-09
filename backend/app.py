@@ -9,7 +9,10 @@ import pandas as pd
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000"])
+CORS(app, origins=[
+    "http://localhost:3000",
+    "https://ai-powered-sql-query-generator-1.onrender.com"
+])
 
 # Session storage: session_id -> db_path
 session_dbs = {}
